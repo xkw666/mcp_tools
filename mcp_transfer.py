@@ -21,13 +21,15 @@ def ensure_remote_dir(sftp, remote_dir: str):
 mcp = FastMCP("transfer")
 @mcp.tool()
 def sftp_upload(file_name:str, code: str) -> Dict[str, str]:
-    """Upload given Python code string to a remote server via sftp.
+    """Upload a Python code string to a remote server via SFTP.
 
     Args:
-        code: Python source code as string (will be directly written to remote .py file)
+        file_name: Name of the target file to create on the remote server.
+        code: Python source code as a string. The content will be directly written
+              to the specified file on the remote server.
 
     Returns:
-        A dictionary with upload status and message.
+        A dictionary containing the upload status and a descriptive message.
     """
     ssh = None
 
