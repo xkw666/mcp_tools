@@ -1,0 +1,9 @@
+llama:
+  host: xxx
+  port: xxx
+  username: xkw
+  # password: xkw123456
+  # 若使用免密登录，请注释 password，启用 key_file_path
+  key_file_path: C:/Users/xkw/.ssh/id_rsa
+
+  remote_path: /home/xkw/mcp
